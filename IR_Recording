@@ -1,0 +1,55 @@
+#include <IRremote.hpp>
+
+#define IR_PIN 2
+
+unsigned long lastSignalTime = 0;
+const int SIGNAL_GAP = 150; // ms debounce
+
+void setup() {
+
+  Serial.begin(115200);
+  IrReceiver.begin(IR_PIN, ENABLE_LED_FEEDBACK);
+
+  Serial.println("UNKNOWN IR HEX Recorder Ready");
+}
+
+void loop() {
+
+  if (IrReceiver.decode()) {
+
+    unsigned long now = millis();
+
+    // debounce spam
+    if (now - lastSignalTime < SIGNAL_GAP) {
+      IrReceiver.resume();
+      return;
+    }
+
+    lastSignalTime = now;
+
+    // ignore repeat frames
+    if (IrReceiver.decodedIRData.flags & IRDATA_FLAGS_IS_REPEAT) {
+      IrReceiver.resume();
+      return;
+    }
+
+    // only UNKNOWN protocols
+    if (IrReceiver.decodedIRData.protocol != UNKNOWN) {
+      IrReceiver.resume();
+      return;
+    }
+
+    // ignore noise
+    if (IrReceiver.irparams.rawlen < 12) {
+      IrReceiver.resume();
+      return;
+    }
+
+    uint32_t code = IrReceiver.decodedIRData.decodedRawData;
+
+    Serial.print("Captured: 0x");
+    Serial.println(code, HEX);
+
+    IrReceiver.resume();
+  }
+}
