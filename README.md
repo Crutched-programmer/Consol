@@ -1,4 +1,4 @@
-<h1>Version **0.1.3** is here!!!!</h1>
+<h1>Version 0.1.3 is here!!!!</h1>
 We are at version **0.1.3** where there is a fnctional prototype with plain circuitry. See the image below:
 <img width="1270" height="814" alt="image" src="https://github.com/user-attachments/assets/3c1ad1bc-cbff-4dc3-ac43-374f1b9c8748" />
 Here are the following features of this prototype:
