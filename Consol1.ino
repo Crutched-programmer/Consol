@@ -147,7 +147,10 @@ void loop() {
       lastIRTime = now;
 
       switch(code){
-
+        case 0xF574DC41:
+          Keyboard.write('s');
+          break;
+        
         case 0x76A77416:
           Keyboard.write(KEY_ENTER);
           break;
