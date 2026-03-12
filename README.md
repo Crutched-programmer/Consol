@@ -1,7 +1,6 @@
-<h1>Version 0.1.3 is here!!!!</h1>
+<h1>Version 0.1.4 is here!!!!</h1>
 We are at version **0.1.4** where there is a fnctional prototype with plain circuitry. See the image below:
-<img https://github.com/user-attachments/assets/f4bdfadc-4b47-46e7-9b99-80569d9d3b70></img>
-
+<img src="https://github.com/user-attachments/assets/f4bdfadc-4b47-46e7-9b99-80569d9d3b70" alt="version 0.1.4!!!!!!!">
 Here are the following changes:
 - I added GPIO 12 and 13 to act as numeric keys.
 - Added na DHT11 humidity and temperature sensor to print the data to the serial monitor. ( at the left with the red LED and wired to A1)
