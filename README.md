@@ -1,6 +1,7 @@
 <h1>Version 0.1.4 is here!!!!</h1>
 We are at version **0.1.4** where there is a fnctional prototype with plain circuitry. See the image below:
-<img src="https://github.com/user-attachments/assets/f4bdfadc-4b47-46e7-9b99-80569d9d3b70" alt="version 0.1.4!!!!!!!">
+<img src=https://github.com/user-attachments/assets/40f03f16-a907-4f83-9cc1-85d0552bf817></img>
+
 Here are the following changes:
 
 - I added GPIO 12 and 13 to act as numeric keys.<br>
